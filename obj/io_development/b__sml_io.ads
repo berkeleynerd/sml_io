@@ -1,0 +1,191 @@
+pragma Warnings (Off);
+pragma Ada_95;
+with System;
+with System.Parameters;
+with System.Secondary_Stack;
+package SML_IOmain is
+
+   procedure SML_IOinit;
+   pragma Export (C, SML_IOinit, "SML_IOinit");
+   pragma Linker_Constructor (SML_IOinit);
+
+   procedure SML_IOfinal;
+   pragma Export (C, SML_IOfinal, "SML_IOfinal");
+   pragma Linker_Destructor (SML_IOfinal);
+
+   type Version_32 is mod 2 ** 32;
+   u00001 : constant Version_32 := 16#6ad74d35#;
+   pragma Export (C, u00001, "sml__ioB");
+   u00002 : constant Version_32 := 16#593018cc#;
+   pragma Export (C, u00002, "sml__ioS");
+
+   --  BEGIN ELABORATION ORDER
+   --  ada%s
+   --  ada.characters%s
+   --  ada.characters.latin_1%s
+   --  interfaces%s
+   --  system%s
+   --  system.atomic_operations%s
+   --  system.byte_swapping%s
+   --  system.parameters%s
+   --  system.parameters%b
+   --  system.crtl%s
+   --  interfaces.c_streams%s
+   --  interfaces.c_streams%b
+   --  system.os_primitives%s
+   --  system.os_primitives%b
+   --  system.spark%s
+   --  system.spark.cut_operations%s
+   --  system.spark.cut_operations%b
+   --  system.storage_elements%s
+   --  system.img_address_32%s
+   --  system.img_address_64%s
+   --  system.return_stack%s
+   --  system.stack_checking%s
+   --  system.stack_checking%b
+   --  system.string_hash%s
+   --  system.string_hash%b
+   --  system.htable%s
+   --  system.htable%b
+   --  system.strings%s
+   --  system.strings%b
+   --  system.traceback_entries%s
+   --  system.traceback_entries%b
+   --  system.unsigned_types%s
+   --  system.wch_con%s
+   --  system.wch_con%b
+   --  system.wch_jis%s
+   --  system.wch_jis%b
+   --  system.wch_cnv%s
+   --  system.wch_cnv%b
+   --  system.traceback%s
+   --  system.traceback%b
+   --  system.secondary_stack%s
+   --  system.standard_library%s
+   --  ada.exceptions%s
+   --  system.exceptions_debug%s
+   --  system.exceptions_debug%b
+   --  system.soft_links%s
+   --  system.wch_stw%s
+   --  system.wch_stw%b
+   --  ada.exceptions.last_chance_handler%s
+   --  ada.exceptions.last_chance_handler%b
+   --  ada.exceptions.traceback%s
+   --  ada.exceptions.traceback%b
+   --  system.address_image%s
+   --  system.address_image%b
+   --  system.exception_table%s
+   --  system.exception_table%b
+   --  ada.numerics%s
+   --  ada.numerics.big_numbers%s
+   --  system.exceptions%s
+   --  system.exceptions.machine%s
+   --  system.exceptions.machine%b
+   --  system.img_int%s
+   --  system.memory%s
+   --  system.memory%b
+   --  system.secondary_stack%b
+   --  system.soft_links.initialize%s
+   --  system.soft_links.initialize%b
+   --  system.soft_links%b
+   --  system.standard_library%b
+   --  system.traceback.symbolic%s
+   --  system.traceback.symbolic%b
+   --  ada.exceptions%b
+   --  ada.containers%s
+   --  ada.io_exceptions%s
+   --  ada.strings%s
+   --  ada.strings.utf_encoding%s
+   --  ada.strings.utf_encoding%b
+   --  ada.strings.utf_encoding.strings%s
+   --  ada.strings.utf_encoding.strings%b
+   --  ada.strings.utf_encoding.wide_strings%s
+   --  ada.strings.utf_encoding.wide_strings%b
+   --  ada.strings.utf_encoding.wide_wide_strings%s
+   --  ada.strings.utf_encoding.wide_wide_strings%b
+   --  interfaces.c%s
+   --  interfaces.c%b
+   --  system.arith_64%s
+   --  system.arith_64%b
+   --  system.atomic_primitives%s
+   --  system.atomic_primitives%b
+   --  system.atomic_counters%s
+   --  system.atomic_counters%b
+   --  system.atomic_operations.test_and_set%s
+   --  system.atomic_operations.test_and_set%b
+   --  system.case_util%s
+   --  system.case_util%b
+   --  system.fat_flt%s
+   --  system.fat_lflt%s
+   --  system.fat_llf%s
+   --  system.os_constants%s
+   --  system.os_lib%s
+   --  system.os_lib%b
+   --  system.os_locks%s
+   --  system.finalization_primitives%s
+   --  system.finalization_primitives%b
+   --  system.val_util%s
+   --  system.val_util%b
+   --  system.val_fixed_64%s
+   --  system.val_llu%s
+   --  ada.tags%s
+   --  ada.tags%b
+   --  ada.strings.text_buffers%s
+   --  ada.strings.text_buffers%b
+   --  ada.strings.text_buffers.utils%s
+   --  ada.strings.text_buffers.utils%b
+   --  system.put_images%s
+   --  system.put_images%b
+   --  ada.streams%s
+   --  ada.streams%b
+   --  system.file_control_block%s
+   --  system.finalization_root%s
+   --  system.finalization_root%b
+   --  ada.finalization%s
+   --  ada.containers.helpers%s
+   --  ada.containers.helpers%b
+   --  system.file_io%s
+   --  system.file_io%b
+   --  system.storage_pools%s
+   --  system.storage_pools%b
+   --  system.stream_attributes%s
+   --  system.stream_attributes.xdr%s
+   --  system.stream_attributes.xdr%b
+   --  system.stream_attributes%b
+   --  system.val_uns%s
+   --  system.val_int%s
+   --  ada.calendar%s
+   --  ada.calendar%b
+   --  ada.calendar.time_zones%s
+   --  ada.calendar.time_zones%b
+   --  ada.calendar.formatting%s
+   --  ada.calendar.formatting%b
+   --  system.bit_ops%s
+   --  system.bit_ops%b
+   --  ada.strings.maps%s
+   --  ada.strings.maps%b
+   --  ada.strings.maps.constants%s
+   --  ada.characters.handling%s
+   --  ada.characters.handling%b
+   --  ada.strings.search%s
+   --  ada.strings.search%b
+   --  ada.strings.fixed%s
+   --  ada.strings.fixed%b
+   --  ada.strings.unbounded%s
+   --  ada.strings.unbounded%b
+   --  system.file_attributes%s
+   --  system.regexp%s
+   --  system.regexp%b
+   --  ada.directories%s
+   --  ada.directories.hierarchical_file_names%s
+   --  ada.directories.validity%s
+   --  ada.directories.validity%b
+   --  ada.directories%b
+   --  ada.directories.hierarchical_file_names%b
+   --  system.sequential_io%s
+   --  system.sequential_io%b
+   --  sml.io%s
+   --  sml.io%b
+   --  END ELABORATION ORDER
+
+end SML_IOmain;

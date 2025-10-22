@@ -1,0 +1,30 @@
+with "sml.gpr";
+
+project SML_IO is
+
+   for Library_Name use "SML_IO";
+   for Library_Dir use "lib";
+   for Create_Missing_Dirs use "True";
+   for Source_Dirs use ("src/");
+   for Object_Dir use "obj";
+   for Library_Interface use ("SML.IO");
+
+   type Library_Type_Type is ("relocatable", "static", "static-pic");
+   Library_Type : Library_Type_Type := external ("SML_IO_LIBRARY_TYPE", external ("LIBRARY_TYPE", "static"));
+   for Library_Kind use Library_Type;
+   for Library_Standalone use "standard";
+
+   package Compiler is
+      for Default_Switches ("Ada") use ("-gnat2022", "-gnatwa");
+   end Compiler;
+
+   package Prove is
+      for Proof_Switches ("Ada") use ("--mode=flow", "--warnings=continue", "--report=all");
+      for Proof_Dir use "proof";
+   end Prove;
+
+   package Binder is
+      for Switches ("Ada") use ("-Es");
+   end Binder;
+
+end SML_IO;

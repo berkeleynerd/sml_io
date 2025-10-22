@@ -1,0 +1,257 @@
+V "GNAT Lib v15"
+A -Og
+A -gnatA
+A -ffunction-sections
+A -fdata-sections
+A -g
+A -gnatp
+A -gnato
+A -gnatwa
+A -gnatw.X
+A -gnatVa
+A -gnaty3
+A -gnatyM120
+A -gnatyB
+A -gnatyl
+A -gnatya
+A -gnatyO
+A -gnat2022
+A -gnatW8
+A -mmacosx-version-min=14.0
+A -mcpu=apple-m1
+A -mlittle-endian
+A -mabi=lp64
+A -fPIC
+P SL SS ZX
+
+RN
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_ACCESS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_IMPLICIT_LOOPS
+
+U sml.io%b		sml-io.adb		6ad74d35 NE OO PK IU
+W ada%s			ada.ads			ada.ali
+W ada.directories%s	a-direct.adb		a-direct.ali
+Z ada.io_exceptions%s	a-ioexce.ads		a-ioexce.ali
+W ada.sequential_io%s
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+Z ada.unchecked_conversion%s
+W interfaces%s		interfac.ads		interfac.ali
+Z interfaces.c_streams%s  i-cstrea.adb		i-cstrea.ali
+W sml%s			sml.ads			sml.ali
+W sml.dom%s		sml-dom.adb		sml-dom.ali
+W sml.dom.writer%s	sml-dom-writer.adb	sml-dom-writer.ali
+W system%s		system.ads		system.ali
+Z system.byte_swapping%s  s-bytswa.ads		s-bytswa.ali
+Z system.crtl%s		s-crtl.ads		s-crtl.ali
+Z system.file_control_block%s  s-ficobl.ads	s-ficobl.ali
+Z system.file_io%s	s-fileio.adb		s-fileio.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.sequential_io%s  s-sequio.adb		s-sequio.ali
+Z system.storage_elements%s  s-stoele.ads	s-stoele.ali
+
+U sml.io%s		sml-io.ads		593018cc EB NE OO PK IU
+W sml%s			sml.ads			sml.ali
+W sml.dom%s		sml-dom.adb		sml-dom.ali
+W sml.dom.parser%s	sml-dom-parser.adb	sml-dom-parser.ali
+
+D ada.ads		20250419085653 76789da1 ada%s
+D a-calend.ads		20250419085653 bf7f3cc9 ada.calendar%s
+D a-charac.ads		20250419085653 2d3ec45b ada.characters%s
+D a-chlat1.ads		20250419085653 e0d72e76 ada.characters.latin_1%s
+D a-direct.ads		20250419085653 467e87a1 ada.directories%s
+D a-except.ads		20250419085653 e7970cd9 ada.exceptions%s
+D a-finali.ads		20250419085653 bf4f806b ada.finalization%s
+D a-ioexce.ads		20250419085653 40018c65 ada.io_exceptions%s
+D a-sequio.ads		20250419085653 3573d8ce ada.sequential_io%s
+D a-sequio.adb		20250419085653 3a82bda9 ada.sequential_io%b
+D a-stream.ads		20250419085653 17477cbd ada.streams%s
+D a-string.ads		20250419085653 90ac6797 ada.strings%s
+D a-strmap.ads		20250419085653 1f91ebb6 ada.strings.maps%s
+D a-strsea.ads		20250419085653 18c3c634 ada.strings.search%s
+D a-sttebu.ads		20250419085653 f1ad67a2 ada.strings.text_buffers%s
+D a-strunb.ads		20250419085653 b10770ab ada.strings.unbounded%s
+D a-stuten.ads		20250419085653 c6ced0ae ada.strings.utf_encoding%s
+D a-tags.ads		20250419085653 fbca0ad5 ada.tags%s
+D a-unccon.ads		20250419085653 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20250419085653 9111f9c1 interfaces%s
+D i-c.ads		20250419085653 e94c966a interfaces.c%s
+D i-cstrea.ads		20250419085653 ffd01b9d interfaces.c_streams%s
+D sml.ads		20251021124920 2aa5c9b7 sml%s
+D sml-dom.ads		20251021134856 1a9f27b9 sml.dom%s
+D sml-dom-parser.ads	20251021134856 239d75bc sml.dom.parser%s
+D sml-dom-writer.ads	20251021134856 58e867ed sml.dom.writer%s
+D sml-io.ads		20251022202538 4a97837e sml.io%s
+D sml-io.adb		20251022202626 0ba5f6c9 sml.io%b
+D sml-memory_model.ads	20251021134856 b73b376a sml.memory_model%s
+D sml-schema.ads	20251021134856 12041dbe sml.schema%s
+D sml-utf8.ads		20251021134856 a6bcc4c3 sml.utf8%s
+D system.ads		20250419085653 70765b54 system%s
+D s-atocou.ads		20250419085653 dc18efc3 system.atomic_counters%s
+D s-bytswa.ads		20250419085653 1d5476e8 system.byte_swapping%s
+D s-crtl.ads		20250419085653 beb39b9e system.crtl%s
+D s-exctab.ads		20250419085653 91bef6ef system.exception_table%s
+D s-ficobl.ads		20250419085653 dc5161d4 system.file_control_block%s
+D s-fileio.ads		20250419085653 45ce2f0f system.file_io%s
+D s-finpri.ads		20250419085653 5970d55a system.finalization_primitives%s
+D s-finroo.ads		20250419085653 0a7c3ed4 system.finalization_root%s
+D s-oscons.ads		20250522142959 16132a6a system.os_constants%s
+D s-oslock.ads		20250419085653 13fa6b78 system.os_locks%s
+D s-parame.ads		20250419085653 3597fc11 system.parameters%s
+D s-putima.ads		20250419085653 17291fe4 system.put_images%s
+D s-retsta.ads		20250419085653 0f6b06cb system.return_stack%s
+D s-secsta.ads		20250419085653 578279f5 system.secondary_stack%s
+D s-sequio.ads		20250419085653 fc7560a7 system.sequential_io%s
+D s-soflin.ads		20250419085653 5d88fdea system.soft_links%s
+D s-stache.ads		20250419085653 0b81c1fe system.stack_checking%s
+D s-stalib.ads		20250419085653 1c9580f6 system.standard_library%s
+D s-stoele.ads		20250419085653 ccded4e8 system.storage_elements%s
+D s-stratt.ads		20250419085653 516607ae system.stream_attributes%s
+D s-traent.ads		20250419085653 c81cbf8c system.traceback_entries%s
+D s-unstyp.ads		20250419085653 fa2a7f59 system.unsigned_types%s
+G a e
+G c Z s b [read_file sml__io 39 13 none]
+G c Z s b [parse_file sml__io 48 13 none]
+G c Z s b [parse_file_io_error sml__io 53 13 none]
+G c Z s b [write_file sml__io 63 13 none]
+G c Z s b [write_document sml__io 72 13 none]
+G c Z s b [file_exists sml__io 84 13 none]
+G c Z s b [file_size sml__io 89 13 none]
+G c Z s b [status_message sml__io 95 13 none]
+G c Z s s [read_resultIP sml__io 29 9 none]
+G c Z s s [write_resultIP sml__io 58 9 none]
+G c Z b b [create sml__io__byte_io 70 14 16_4]
+G c Z b b [open sml__io__byte_io 76 14 16_4]
+G c Z b b [close sml__io__byte_io 82 14 16_4]
+G c Z b b [delete sml__io__byte_io 83 14 16_4]
+G c Z b b [reset sml__io__byte_io 84 14 16_4]
+G c Z b b [reset sml__io__byte_io 85 14 16_4]
+G c Z b b [mode sml__io__byte_io 87 13 16_4]
+G c Z b b [name sml__io__byte_io 88 13 16_4]
+G c Z b b [form sml__io__byte_io 89 13 16_4]
+G c Z b b [is_open sml__io__byte_io 91 13 16_4]
+G c Z b b [flush sml__io__byte_io 93 14 16_4]
+G c Z b b [read sml__io__byte_io 99 14 16_4]
+G c Z b b [write sml__io__byte_io 100 14 16_4]
+G c Z b b [end_of_file sml__io__byte_io 102 13 16_4]
+G c Z b b [to_fcb sml__io__byte_io 60 13 16_4]
+G c Z b b [to_sio sml__io__byte_io 61 13 16_4]
+G c Z b b [byte_swap sml__io__byte_io 66 14 16_4]
+G r c none [parse_file sml__io 48 13 none] [parse sml__dom__parser 60 13 none]
+G r c none [write_document sml__io 72 13 none] [serialize_formatted sml__dom__writer 26 13 none]
+G r c none [write_document sml__io 72 13 none] [serialize sml__dom__writer 22 13 none]
+X 1 ada.ads
+18K9*Ada 22e8 28|7r6 8r6 14r13 16r27 24r14 29r26 29r55 31r20 114r14 122r14
+. 126r26 126r55 128r20
+X 5 a-direct.ads
+76K13*Directories 524e20 28|8w10 14r17 24r18 29r30 29r59 31r24 114r18 122r18
+. 126r30 126r59 128r24
+307I9*File_Size<long_integer> 28|14r29 29r42 31r36 126r42 128r36
+310V13*Exists{boolean} 28|24s30 114s30 122s30
+321V13*Size{307I9} 28|29s71 126s71
+X 9 a-sequio.ads
+43k13*Sequential_IO 160e22 28|7w10 16r31
+53P9*File_Type<47|63P9> 28|19r24[16] 82r22[16]
+55E9*File_Mode
+55n23*In_File{55E9[28|16]} 28|37r38[16]
+55n32*Out_File{55E9[28|16]} 28|85r40[16]
+70U14 Create 28|85s18[16]
+76U14 Open 28|37s18[16]
+82U14 Close 28|44s18[16] 49s24[16] 89s18[16] 94s24[16]
+91V13 Is_Open{boolean} 28|48s24[16] 93s24[16]
+99U14 Read 28|39s21[16]
+100U14 Write 28|87s21[16]
+102V13 End_Of_File{boolean} 28|38s28[16]
+X 23 sml.ads
+7K9*SML 36e8 27|7r6 8r6 10r9 48r47 74r19 79r22 101r5 28|9r6 11r14 55r47 57r30
+. 58r24 71r17 102r19 106r28 107r15 151r5
+X 24 sml-dom.ads
+10K13*DOM 251e12 27|7w10 8r10 48r51 74r23 79r26 28|9r10 55r51 57r34 58r28
+. 71r21 102r23 106r32 107r19
+25R9*Document 236e4 27|74r27 28|102r27
+X 25 sml-dom-parser.ads
+10K17*Parser 261e19 27|8w14 48r55 28|55r55 57r38 58r32 71r25
+26n7*Malformed_Structure{24E9} 28|58r39
+35R9*Parse_Error 42e14 28|57r45
+36e7*Kind{24E9} 28|58m10
+37i7*Position{natural} 28|59m10
+38i7*Line{positive} 28|60m10
+39i7*Column{positive} 28|61m10
+40a7*Message{string} 28|62m10
+41i7*Msg_Length{natural} 28|63m10
+45R9*Parse_Result 53e14 27|48r62 28|55r62
+45b23*Success{boolean} 28|66m18
+51r13*Error{35R9} 28|66m36
+60V13*Parse{45R9} 28|71s32
+X 26 sml-dom-writer.ads
+9K17*Writer 40e19 28|9w14 106r36 107r23
+22V13*Serialize{string} 28|107s30
+26V13*Serialize_Formatted{string} 28|106s43
+X 27 sml-io.ads
+10K13*IO 23|7k9 27|101l9 101e11 28|11b18 151l9 151t11
+12@26*File_System 13r23 46r26 51r26 56r26 87r26 93r26
+18N4*Max_File_Size 32r49 33r43 45r58 67r40 92r34 28|31r47 38r63 128r47 129r20
+19N4*Max_Path_Length 41r53 50r53 55r53 66r37 78r37 86r53 91r53
+21E9*IO_Status 27e19 29r31 53r56 59r23 95r38 28|75r56 139r38
+22n7*Success{21E9} 31r15 43r38 69r39 81r43 28|20r39 65r29 90r28 142r15
+23n7*File_Not_Found{21E9} 29r44 28|25r28 143r15
+24n7*File_Too_Large{21E9} 28|32r31 144r15
+25n7*Read_Error{21E9} 28|51r31 145r15
+26n7*Write_Error{21E9} 28|96r31 146r15
+27n7*Parse_Error{21E9} 28|147r15
+29R9*Read_Result 29d22 37e14 39r46 28|18r46 20r16 56r27 76r27
+29e22*Status{21E9} 30r12 43r29 28|25m18 32m21 51m21 65r19 78r23
+32i13*Content_Length{integer} 44r31 45r40 28|43m17 69r71
+33a13*Content{string} 28|40m20 69r48
+39V13*Read_File{29R9} 39>24 43r12 44r14 45r23 28|18b13 53l8 53t17 56s42 76s42
+39a24 Path{string} 41r13 41r38 28|18b24 24r38 29r77 37r47
+48V13*Parse_File{25|45R9} 48>25 28|55b13 73l8 73t18
+48a25 Path{string} 50r13 50r38 28|55b25 56r53
+53V13*Parse_File_IO_Error{21E9} 53>34 28|75b13 79l8 79t27
+53a34 Path{string} 55r13 55r38 28|75b34 76r53
+58R9*Write_Result 61e14 63r65 75r43 28|81r65 103r43
+59e7*Status{21E9} 69r30 81r34 28|90m18 96m21
+60i7*Bytes_Written{natural} 70r32 82r36 28|90m37 96m44
+63V13*Write_File{58R9} 63>25 63>40 69r12 70r14 28|81b13 98l8 98t18 109s14
+63a25 Path{string} 65r13 66r22 28|81b25 85r50
+63a40 Content{string} 67r22 70r48 28|81b40 86r19 87r34 90r54
+72V13*Write_Document{58R9} 73>7 74>7 75>7 81r12 82r14 28|100b13 110l8 110t22
+73a7 Path{string} 77r13 78r22 28|101b7 109r26
+74r7 Doc{24|25R9} 79r46 28|102b7 106r64 107r41
+75b7 Formatted{boolean} 28|103b7 106r13
+84V13*File_Exists{boolean} 84>26 28|112b13 118l8 118t19
+84a26 Path{string} 86r13 86r38 28|112b26 114r38
+89V13*File_Size{natural} 89>24 92r14 28|120b13 137l8 137t17
+89a24 Path{string} 91r13 91r38 28|120b24 122r38 126r77
+95V13*Status_Message{string} 95>29 98r14 99r23 28|139b13 149l8 149t22
+95e29 Status{21E9} 28|139b29 141r12
+X 28 sml-io.adb
+16K12 Byte_IO[9|43] 19r16 37r10 37r30 38r20 39r13 44r10 48r16 49r16 82r14
+. 85r10 85r32 87r13 89r10 93r16 94r16
+19p7 File{9|53P9[16]} 37m24 37r24 38r41 39r27 44m25 44r25 48r33 49m31 49r31
+20r7 Result{27|29R9} 40m13 43m10 45r17
+21e7 Char{character} 39m33 40r37
+22i7 Pos{natural} 38r56 40r29 41m13 41r20 43r35
+29i10 Size{5|307I9} 31r13
+56r7 Read_Res{27|29R9} 65r10 69r39 69r62
+57r7 Dummy_Error{25|35R9} 66r45
+69a10 Content{string} 71r39
+76r7 Read_Res{27|29R9} 78r14
+82p7 File{9|53P9[16]} 85m26 85r26 87r28 89m25 89r25 93r33 94m31 94r31
+86i14 I{integer} 87r43
+105a7 Output{string} 109r32
+126i10 Size{5|307I9} 128r13 131r29
+X 47 s-sequio.ads
+63P9*File_Type(43R9)
+

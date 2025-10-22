@@ -1,0 +1,28 @@
+name = "sml_io"
+description = "SML file I/O utilities (spec in SPARK; body not)"
+version = "0.1.0-dev"
+
+authors = ["Your Name"]
+maintainers = ["Your Name <example@example.com>"]
+licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
+website = ""
+tags = ["sml", "io", "spark", "utilities"]
+
+[dependencies]
+sml = "^0.1.0-dev"
+
+# Note: During staging inside the monorepo, we rely on the
+# top-level sml.gpr and config. When extracting to its own
+# repository, convert this crate to depend on sml via Alire
+# and add a local config/sml_config.gpr if needed.
+
+[build-switches]
+"*".ada_version = "Ada2022"
+"*".style_checks = [
+  "-gnaty3",
+  "-gnatyM120",
+  "-gnatyB",
+  "-gnatyl",
+  "-gnatya",
+  "-gnatyO"
+]
