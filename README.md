@@ -8,14 +8,17 @@ SML file I/O utilities for the SML core library.
 ## Usage
 
 ```bash
-# Link local core during development
+# Link local core during development (path dependency)
 alr develop --use ../sml
 
 # Build library
 alr build
 
 # Build and run tests
-alr exec -- gprbuild -P test_io.gpr
+alr test
+
+# Or manually
+alr exec -- gprbuild -P test/test_all.gpr
 bin/test_io
 ```
 
@@ -24,7 +27,7 @@ bin/test_io
 alire.toml:
 
 ```toml
-[dependencies]
+[depends-on]
 sml = "^0.1.0"
 ```
 

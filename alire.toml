@@ -1,20 +1,18 @@
 name = "sml_io"
-description = "SML file I/O utilities (spec in SPARK; body not)"
+description = ""
 version = "0.1.0-dev"
 
 authors = ["Your Name"]
 maintainers = ["Your Name <example@example.com>"]
 licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
 website = ""
-tags = ["sml", "io", "spark", "utilities"]
+tags = []
 
-[dependencies]
+[[depends-on]]
 sml = "^0.1.0-dev"
 
-# Note: During staging inside the monorepo, we rely on the
-# top-level sml.gpr and config. When extracting to its own
-# repository, convert this crate to depend on sml via Alire
-# and add a local config/sml_config.gpr if needed.
+[[pins]]
+sml = { path='../sml' }
 
 [build-switches]
 "*".ada_version = "Ada2022"
@@ -26,3 +24,13 @@ sml = "^0.1.0-dev"
   "-gnatya",
   "-gnatyO"
 ]
+
+[[actions]]
+type = "test"
+name = "build-tests"
+command = ["alr", "exec", "--", "gprbuild", "-p", "-P", "test/test_all.gpr", "-j0"]
+
+[[actions]]
+type = "test"
+name = "run-tests"
+command = ["bin/test_io"]
