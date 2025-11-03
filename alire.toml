@@ -8,7 +8,7 @@ licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
 website = ""
 tags = ["sml", "io", "spark", "utilities"]
 
-[dependencies]
+[[depends-on]]
 sml = "^0.1.0-dev"
 
 # Note: During staging inside the monorepo, we rely on the
