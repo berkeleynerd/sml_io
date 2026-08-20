@@ -13,11 +13,6 @@ project-files = ["sml_io.gpr"]
 [[depends-on]]
 sml = "=0.1.0"
 
-# Note: During staging inside the monorepo, we rely on the
-# top-level sml.gpr and config. When extracting to its own
-# repository, convert this crate to depend on sml via Alire
-# and add a local config/sml_config.gpr if needed.
-
 [build-switches]
 "*".ada_version = "Ada2022"
 "*".style_checks = [
