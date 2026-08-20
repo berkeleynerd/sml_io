@@ -12,11 +12,11 @@ procedure Test_IO is
    use Ada.Text_IO;
    use SML.IO;
 
-   --  Test file paths (reuse top-level fixtures during staging)
-   Valid_Small_Path  : constant String := "../../test/fixtures/valid_small.sml";
-   Valid_Medium_Path : constant String := "../../test/fixtures/valid_medium.sml";
-   Invalid_Path      : constant String := "../../test/fixtures/invalid.sml";
-   Nonexistent_Path  : constant String := "../../test/fixtures/does_not_exist.sml";
+   --  Test fixtures are self-contained in this crate.
+   Valid_Small_Path  : constant String := "test/fixtures/valid_small.sml";
+   Valid_Medium_Path : constant String := "test/fixtures/valid_medium.sml";
+   Invalid_Path      : constant String := "test/fixtures/invalid.sml";
+   Nonexistent_Path  : constant String := "test/fixtures/does_not_exist.sml";
    Output_Path       : constant String := "bin/output_test.sml";
 
    procedure Test_Read_Small_File is
@@ -154,7 +154,7 @@ procedure Test_IO is
    end Test_Round_Trip;
 
 begin
-   Put_Line ("SML.IO Test Suite (staged crate)");
+   Put_Line ("SML.IO Test Suite");
    Test_Read_Small_File;
    Test_Read_Medium_File;
    Test_Read_Nonexistent_File;
@@ -168,4 +168,3 @@ begin
    Test_Round_Trip;
    Put_Line ("Done.");
 end Test_IO;
-

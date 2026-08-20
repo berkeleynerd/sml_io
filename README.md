@@ -8,7 +8,7 @@ SML file I/O utilities for the SML core library.
 ## Usage
 
 ```bash
-# Link local core during development
+# Link a local core checkout during development
 alr develop --use ../sml
 
 # Build library
@@ -21,11 +21,11 @@ bin/test_io
 
 ## Depend on this crate
 
-alire.toml:
+`alire.toml`:
 
 ```toml
-[dependencies]
-sml = "^0.1.0"
+[[depends-on]]
+sml = "=0.1.0"
 ```
 
 ## Notes
