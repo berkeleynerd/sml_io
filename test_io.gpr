@@ -1,4 +1,4 @@
-with "../../sml.gpr";
+with "sml.gpr";
 with "sml_io.gpr";
 
 project Test_IO is
@@ -16,11 +16,5 @@ project Test_IO is
    package Binder is
       for Switches ("Ada") use ("-Es");
    end Binder;
-
-   package Linker is
-      for Linker_Options use (
-         "-L/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib",
-         "-Wl,-stack_size,0x8000000");
-   end Linker;
 
 end Test_IO;

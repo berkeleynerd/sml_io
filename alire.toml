@@ -1,15 +1,17 @@
 name = "sml_io"
 description = "SML file I/O utilities (spec in SPARK; body not)"
-version = "0.1.0-dev"
+version = "0.1.0"
 
-authors = ["Your Name"]
-maintainers = ["Your Name <example@example.com>"]
+authors = ["Rebecca Wise"]
+maintainers = ["Rebecca Wise <rebecca@berkeleynerd.com>"]
+maintainers-logins = ["berkeleynerd"]
 licenses = "MIT OR Apache-2.0 WITH LLVM-exception"
-website = ""
+website = "https://git.idril.is/rebecca/sml_io"
 tags = ["sml", "io", "spark", "utilities"]
+project-files = ["sml_io.gpr"]
 
 [[depends-on]]
-sml = "^0.1.0-dev"
+sml = "=0.1.0"
 
 # Note: During staging inside the monorepo, we rely on the
 # top-level sml.gpr and config. When extracting to its own
@@ -26,3 +28,19 @@ sml = "^0.1.0-dev"
   "-gnatya",
   "-gnatyO"
 ]
+
+[gpr-externals]
+SML_IO_LIBRARY_TYPE = ["static", "relocatable", "static-pic"]
+
+[gpr-set-externals]
+SML_IO_LIBRARY_TYPE = "static"
+
+[[actions]]
+type = "test"
+name = "build-tests"
+command = ["alr", "exec", "--", "gprbuild", "-p", "-P", "test_io.gpr", "-j0"]
+
+[[actions]]
+type = "test"
+name = "run-tests"
+command = ["bin/test_io"]
